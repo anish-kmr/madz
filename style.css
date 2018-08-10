@@ -1,0 +1,78 @@
+* {
+  overflow: none;
+  margin: 0;
+  padding: 0; }
+
+body {
+  padding: 0; }
+  body #header {
+    z-index: 3;
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    margin: 0px;
+    padding: 10px;
+    height: 5em;
+    width: 100%; }
+    @media (max-width: 640px) {
+      body #header {
+        display: none; } }
+    body #header h1 {
+      display: inline-block;
+      margin: 5px 0px 10px 10px; }
+      body #header h1 span {
+        background-color: black;
+        padding: 0px 4px; }
+    body #header p {
+      display: inline-block;
+      margin: 0px;
+      font-size: 16px; }
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  z-index: 2;
+  border-left: 200px solid #550780;
+  border-right: 0px solid green;
+  border-bottom: 280px solid transparent; }
+  @media (max-width: 640px) {
+    .box {
+      display: none; } }
+
+.tilt {
+  z-index: 1;
+  border-left: 300px solid #3e095e;
+  border-right: 0px solid green;
+  border-bottom: 220px solid transparent; }
+
+nav {
+  margin: 0; }
+  @media (max-width: 640px) {
+    nav {
+      background-color: #007BFF; } }
+
+ul li a {
+  color: #550780 !important;
+  border-radius: 15px;
+  padding: 10px 20px;
+  width: 100px;
+  font-weight: bolder; }
+  ul li a:hover {
+    background-color: #3e095e;
+    color: white !important; }
+  @media (max-width: 640px) {
+    ul li a {
+      border-bottom: 1px solid rgba(0, 0, 255, 0.4);
+      color: #ffffff;
+      border-radius: 0;
+      width: auto; } }
+
+.bg {
+  height: 40em;
+  background-image: url("sources\\maths.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; }
