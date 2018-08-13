@@ -196,16 +196,17 @@
 // PRIME FACTORS 
       $("#pfc").click(function(){
          var n = $("#npf").val();
-         var text = "PRIME FACTORS OF " + n + "ARE : ";
+         var text = "PRIME FACTORS OF  " + n + " ARE : ";
          var i=2;
-        while(n!==0){
-          if(isprime(i)==1 and n%i==0){
-            text = text + i + " ";
-            n=n/i;
-            i++;
-          }
-          else{i++;}
-        }
+         for(i=2;i<=n;i++){
+           if(isprime(i)==1){
+             while(n%i==0){
+               text += " "+ i;
+               n=n/i;
+
+             }
+           }
+         }
         $("#pfo").text(text);
       });
 
