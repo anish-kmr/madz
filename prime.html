@@ -83,7 +83,7 @@
            <h2 align="center">INPUT</h2>
 
           
-            <input type="number" placeholder="N" id="n" value="n">
+            <input type="number" placeholder="N" id="npr" value="npr">
            
            <br /><br />
            <button id="prangec">Calculate</button>
@@ -106,7 +106,7 @@
            <h2 align="center">INPUT</h2>
 
            
-           <input type="number" placeholder="n" id="n" value="n">
+           <input type="number" placeholder="n" id="npf" value="npf">
            <br /><br />
            <button id="pfc">Calculate</button>
            <button><a href="prime.html">Reset</a></button>
@@ -176,17 +176,12 @@
 // CHECK PRIME ENDS
 // PRIME NUMBER RANGE
       $("#prangec").click(function(){
-        var n = $("#n").val();
+        var n = $("#npr").val();
         $("#prangeo").text(n);
         var text = "Prime numbers between 1  and " + n + "are   :  " ;
         $("#prangeo").text(text);
         var i =2;
-        while(i<n){
-          if(isprime(i)==1){
-              text = text + i ;
-              i++;
-          }
-        }
+        
         $("#prangeo").text(text);
       });
       
