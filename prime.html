@@ -103,7 +103,7 @@
      <div id="pf">
        <div class="row">
          <div class="col-md-6 border-right ip" align="center" >
-           <h2 align="center">INPUT</h2>
+           <h2 align="center">INP</h2>
 
            
            <input type="number" placeholder="n" id="npf" value="npf">
@@ -194,6 +194,19 @@
       
 // PRIME NUMBER RANGE ENDS
 // PRIME FACTORS 
+      $("#pfc).click(function(){
+        var n = $("#npf).val();
+        var text = "PRIME FACTORS OF " + "ARE  : ";
+        var i =2;
+        while(n <> 0){
+           if(isprime(i) and n%i==0){
+               text = text + " " + i " ";
+               n=n/i;
+               i++;
+           }
+        }
+      $("#pfo").text(text);
+        });
 
     });
 
