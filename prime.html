@@ -62,7 +62,7 @@
        <div class="row">
          <div class="col-md-6 border-right ip" align="center" >
            <h2 align="center">INPUT</h2>
-           <input type="number" placeholder="Number" id="prime" value="p">
+           <input type="number" placeholder="n" id="p" value="p">
            <br /><br />
            <button id="primec">Calculate</button>
            <button><a href="prime.html">Reset</a></button>
@@ -141,6 +141,7 @@
           if(i%2==0){
              flag=0;
              i++;
+            break;
           }
           else{
               i++;
@@ -154,22 +155,21 @@
 
 
 
+//       $("#primec").click(function(){
+//         var n= $("#p").val();
+//         if(isprime(n)==0){var text = "SORRY! NO NEGATIVE NUMBERS";}
+//         else{var text= n + " ! = " + factorial(n) ;}
+
+//        $("#primeo").text(text);
+//       });
+
       $("#primec").click(function(){
-        var n= $("#prime").val();
-        if(isprime(n)==0){var text = "SORRY! NO NEGATIVE NUMBERS";}
-        else{var text= n + " ! = " + factorial(n) ;}
-
-       $("#primeo").text(text);
-      });
-
-      $("#cb").click(function(){
-        var n= $("#n").val();
-        var r= $("#r").val();
-        if(factorial(n)== -1 ){var text = "ENTER NUMBER GREATER THAN ZERO";}
+        var n= $("#p").val();
+         if(isprime(n)==0){var text = "ENTER NUMBER GREATER THAN ZERO";}
         else if(isprime(n)==0){var text = n + "is not a prime number";}
         else{var text = n + "is a prime number";}
 
-       $("#co").text(text);
+       $("#primeo").text(text);
       });
 
       $("#pb").click(function(){
