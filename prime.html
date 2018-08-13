@@ -106,7 +106,7 @@
            <h2 align="center">INPUT</h2>
 
            
-           <input type="number" placeholder="N" id="npf" value="npf">
+           <input type="number" placeholder="n" id="npf" value="npf">
            <br /><br />
            <button id="pfc">Calculate</button>
            <button><a href="prime.html">Reset</a></button>
@@ -194,20 +194,6 @@
       
 // PRIME NUMBER RANGE ENDS
 // PRIME FACTORS 
-      $("#pfc").click(function(){
-        var n = $("#npf").val();
-        var i = 2;
-        var text=" PRIME FACTORS OF " + n + " are : ";
-        while(n<>0){
-            if(isprime(i) and n%i==0){
-              text = text + i + " " ;
-              n=n/i;
-              i++;
-            }
-        }
-        $("#pfo").text(text);
-      });      
-      
 
     });
 
