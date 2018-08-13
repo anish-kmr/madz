@@ -80,7 +80,7 @@
 
        <div class="row">
          <div class="col-md-6 border-right ip" align="center" >
-           <h2 align="center">INPUT  n</h2>
+           <h2 align="center">INPUT</h2>
 
           
             <input type="number" placeholder="N" id="npr" value="npr">
@@ -177,11 +177,11 @@
 // PRIME NUMBER RANGE
       $("#prangec").click(function(){
         var n = $("#npr").val();
-        var text = "Prime numbers between 1  and " + n + "are   :  " ;
+        var text = "Prime numbers between 1  and " + n + "are   :  \n" ;
         var j = 3 ; 
         while(j<n){
           if(isprime(j)==1){
-              text =text + j + " " ;
+              text =text + j + " , " ;
               j++;
           }
           else{j++;}
