@@ -52,12 +52,14 @@ nav {
   margin: 0;
   z-index: 4; }
   nav .search {
+    outline: 1px solid green
     margin-left: 100px;
     padding: 0px;
     width: 45%;
     display: inline-block;
     position: relative; }
     nav .search input {
+      outline:1px solid red
       border: 2px solid black;
       padding: 2px;
       padding-right: 10px;
