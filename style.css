@@ -55,7 +55,7 @@ nav {
     
     margin-left: 100px;
     padding: 0px;
-    width: 40%;
+    width: 35%;
     display: inline-block;
     position: relative; }
     nav .search input {
@@ -68,8 +68,8 @@ nav {
       border-radius: 0px 10px 10px 0px;
       position: absolute;
       top: 2px;
-      right: 2px;
-      background-color: transparent; }
+      right: 0px;
+      background-color: rgb(85, 7, 128); }
   @media (max-width: 640px) {
     nav {
       background-color: #007BFF; } }
