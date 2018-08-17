@@ -51,6 +51,23 @@ body {
 nav {
   margin: 0;
   z-index: 4; }
+  nav .search {
+    margin-left: 100px;
+    padding: 0px;
+    width: 45%;
+    display: inline-block;
+    position: relative; }
+    nav .search input {
+      border: 2px solid black;
+      padding: 2px;
+      padding-right: 10px;
+      border-radius: 10px; }
+    nav .search button {
+      border-radius: 0px 10px 10px 0px;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background-color: transparent; }
   @media (max-width: 640px) {
     nav {
       background-color: #007BFF; } }
