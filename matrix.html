@@ -13,8 +13,12 @@
   input,textarea{width:35px;z-index: 100;height:35px;}
   .matresult{resize:none}
   .mat{display:inline-block;}
-  .ip h1,#m3 h1{font-size:170px;display:inline-block;margin:0;padding:0}
+  .ip h1,#ma3 h1 ,#ms3 h1,#mm3 h1{font-size:170px;display:inline-block;margin:0;padding:0}
+  .op h5{display:inline-block;float:left;padding:150px 0px}
   .m1{display:inline-block;}
+
+
+
   </style>
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -166,8 +170,8 @@
 
          <div class="col-md-5 op">
            <h2 align="center">  OUTPUT  </h2>
-
-                <div id="ma3">
+                <h5>A + B = </h5>
+                <div id="ma3" class="mat">
                   <table cellpadding="5" border="0" height="10%">
                     <tr>
                       <th rowspan="5" valign="center"><h1>[</h1></th>
@@ -309,8 +313,8 @@
 
          <div class="col-md-5 op">
            <h2 align="center">  OUTPUT  </h2>
-
-                <div id="ms3">
+            <h5>A - B = </h5>
+                <div id="ms3" class="mat">
                   <table cellpadding="5" border="0" height="10%">
                     <tr>
                       <th rowspan="5" valign="center"><h1>[</h1></th>
@@ -451,8 +455,8 @@
 
          <div class="col-md-5 op">
            <h2 align="center">  OUTPUT  </h2>
-
-                <div id="mm3">
+                <h5>A x  B = </h5>
+                <div id="mm3" class="mat">
                   <table cellpadding="5" border="0" height="10%">
                     <tr>
                       <th rowspan="5" valign="center"><h1>[</h1></th>
@@ -504,6 +508,8 @@
 <script>
 $(document).ready(function(){
   $("#ma3").hide();
+  $("#ms3").hide();
+  $("#mm3").hide();
   $("#tab").tabs();
 
   $("#addc").click(function(){
@@ -518,7 +524,7 @@ $(document).ready(function(){
 
 
     $("#ma3").show();
-    $(".matresult").each(function(index){
+    $("#ma3 .matresult").each(function(index){
       var sum = ma1[index] + ma2[index];
       $(this).text(sum);
     })
@@ -538,7 +544,7 @@ $(document).ready(function(){
 
 
     $("#ms3").show();
-    $(".matresult").each(function(index){
+    $("#ms3 .matresult").each(function(index){
       var dif = ms1[index] - ms2[index];
       $(this).text(dif);
     });
@@ -558,7 +564,9 @@ $(document).ready(function(){
     });
     var n1 = [];
     var n2 = [];
-    var i,j;
+    var result =[];
+    var print = [];
+    var i,j,keygen;
 
     for(i=0;i<3;i++){
       var temp=[];
@@ -568,12 +576,48 @@ $(document).ready(function(){
       n1[i]=temp;
 
     }
-    alert(n1[1][2])
+    for(i=0;i<3;i++){
+      var temp=[];
+      for(j=0;j<3;j++){
+        temp.push(mm2[3*i+j]);
+      }
+      n2[i]=temp;
 
-    $("#m3").show();
-    $(".matresult").each(function(index){
-      $(this).text("done");
+    }
+
+//PROCESS FOR MATRIX MULTIPLY WITH 2-D ARRAY n1 AND n2
+
+var s=0;
+for(i=0;i<3;i++){
+  var temp=[];
+		for(j=0;j<3;j++){
+			for(k=0;k<3;k++){
+				s+= n1[i][k] * n2[k][j];
+			}
+			temp[j]=s;
+			s=0;
+		}
+    result[i]=temp;
+
+	}
+  $("#mm3").show();
+
+// RPRINT MULTIPLIED  MATRIX
+    for(i=0;i<3;i++){
+      for(j=0;j<3;j++){
+        print[3*i + j]=result[i][j];
+      }
+    }
+
+
+
+
+    $("#mm3").show();
+    $("#mm3 .matresult").each(function(index){
+      var mul = print[index];
+      $(this).text(mul);
     });
+
 
 
     // $("#m3").show();
