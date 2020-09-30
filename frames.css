@@ -2,7 +2,7 @@ header {
   height: 5em;
   width: 100%;
   background-color: #3e095e;
-  color: white; }
+  color: yellow; }
 
 fieldset.scheduler-border {
   border: 2px solid brown !important;
@@ -16,7 +16,9 @@ fieldset.scheduler-border {
 
 .ip h2 {
   padding: 20px 40px;
+  color:blue;
   margin: 10px 20px; }
 .op h2 {
   padding: 20px 40px;
+  color:red;
   margin: 10px 20px; }
