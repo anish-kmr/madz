@@ -168,7 +168,7 @@
       $("#primec").click(function(){
         var n= $("#p").val();
         if(isprime(n)== -1){var text = "ENTER NUMBER GREATER THAN ZERO";}
-        else if(isprime(n)==0){var text = n + " is not a prime number";}
+        else if(isprime(n)==0){var text = n + " is not a Prime Number";}
         else{var text = n + " is a prime number";}
 
        $("#primeo").text(text);
@@ -177,11 +177,11 @@
 // PRIME NUMBER RANGE
       $("#prangec").click(function(){
         var n = $("#npr").val();
-        var text = "Prime numbers between 1  and " + n + "are   :  \n" ;
+        var text = "Prime numbers between 1  and " + n + " are   :  \n" ;
         var j = 3 ; 
         while(j<n){
           if(isprime(j)==1){
-              text =text + j + "   " ;
+              text =text + j + " , " ;
               j++;
           }
           else{j++;}
